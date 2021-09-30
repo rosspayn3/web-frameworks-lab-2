@@ -5,9 +5,9 @@ const FancyJobsList = (props) => {
 
   // function to pass to FancySelect 
   // filter props.list to only show items based on the option selected in FancySelect
-  const handleChange = (e) => {
+  const filterJobs = (e) => {
     e.preventDefault();
-    console.log(`%c FancySelect option: ${e.target.value} `, "color: #33a");
+    console.log(`%c FancySelect option: ${e.target.value} `, "color: #99c");
     setConcentration(e.target.value);
   };
 
@@ -15,7 +15,8 @@ const FancyJobsList = (props) => {
 
   return (
     <div>
-      <FancySelect options={props.options} onchange={handleChange}/>
+      <h2>Jobs</h2>
+      <FancySelect options={props.options} onchange={filterJobs}/>
       <ul>
         {props.list.filter(job => {return job.concentration.includes(concentration)}).map((job) => {
           return (

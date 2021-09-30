@@ -16,11 +16,9 @@ function App() {
             <div className="App-body">
                 <div className="row">
                     <div className="column">
-                        <h2>Users</h2>
                         <FancyUserList users={users} />
                     </div>
                     <div className="column">
-                        <h2>Jobs</h2>
                         <FancyJobsList options={concentrations} list={jobs} />
                     </div>
                 </div>

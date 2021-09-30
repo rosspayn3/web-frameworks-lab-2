@@ -17,13 +17,13 @@ const FancyJobsList = (props) => {
     <div>
       <FancySelect options={props.options} onchange={handleChange}/>
       <ul>
-        {props.list.filter(item => {return item.concentration.includes(concentration)}).map((item) => {
+        {props.list.filter(job => {return job.concentration.includes(concentration)}).map((job) => {
           return (
-            <li key={item.id}>
-              <strong className="job-title">{item.title}</strong>
+            <li key={job.id}>
+              <strong className="job-title">{job.title}</strong>
               <ul>
-                <li>Salary: {item.salary}</li>
-                <li>Concentration: {item.concentration[0]}</li>
+                <li>Salary: {job.salary}</li>
+                <li>Concentration: {job.concentration[0]}</li>
               </ul>
             </li>
           );

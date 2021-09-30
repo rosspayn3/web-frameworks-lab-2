@@ -34,3 +34,19 @@
 .job-title {
   color:goldenrod
 }
+
+.user-uid {
+  color:mediumseagreen
+} 
+
+.row {
+  display:flex;
+}
+
+.column {
+  flex:50%;
+}
+
+.column ul {
+  list-style-type: none;
+}

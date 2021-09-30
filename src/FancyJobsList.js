@@ -8,23 +8,22 @@ const FancyJobsList = (props) => {
   const handleChange = (e) => {
     e.preventDefault();
     console.log(`%c FancySelect option: ${e.target.value} `, "color: #33a");
-    // filter list here
-    // USE STATE
+    setConcentration(e.target.value);
   };
 
-  const [selection, setSelection] = React.useState('');
+  const [concentration, setConcentration] = React.useState("All");
 
   return (
     <div>
       <FancySelect options={props.options} onchange={handleChange}/>
       <ul>
-        {props.list.map((item) => {
+        {props.list.filter(item => {return item.concentration.includes(concentration)}).map((item) => {
           return (
             <li key={item.id}>
-              <strong>{item.title}</strong>
+              <strong className="job-title">{item.title}</strong>
               <ul>
                 <li>Salary: {item.salary}</li>
-                <li>Concentration: {item.concentration}</li>
+                <li>Concentration: {item.concentration[0]}</li>
               </ul>
             </li>
           );

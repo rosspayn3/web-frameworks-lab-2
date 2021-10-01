@@ -1,52 +1,64 @@
 .App {
-  background-color: #282c34;
-  min-height: 100vh;
-  padding: 5%;
+    background-color: #282c34;
+    min-height: 100vh;
+    padding: 2% 5%;
 }
 
-
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-body {
-  background-color: #282c34;
-  font-size: calc(10px + 1vmin);
-  color: white;
+    background-color: #282c34;
+    font-size: calc(10px + 1vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 .job-title {
-  color:goldenrod
+    color: goldenrod;
 }
 
 .user-uid {
-  color:mediumseagreen
-} 
+    color: mediumseagreen;
+}
 
 .row {
-  display:flex;
+    display: flex;
 }
 
 .column {
-  flex:50%;
+    flex: 50%;
 }
 
 .column ul {
-  list-style-type: none;
+    list-style-type: none;
+}
+
+#form {
+    padding: 2em 1em;
+}
+
+form label {
+    display:block
+}
+
+form input {
+    margin-bottom: 0.25rem;
+    padding: 0.4rem;
 }

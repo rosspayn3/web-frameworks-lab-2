@@ -35,7 +35,7 @@
 }
 
 .user-uid {
-    color: mediumseagreen;
+    color: rgb(100, 185, 255);
 }
 
 .row {
@@ -61,4 +61,13 @@ form label {
 form input {
     margin-bottom: 0.25rem;
     padding: 0.4rem;
+}
+
+#requirements li {
+    color: red;
+}
+
+#requirements .valid {
+    color:rgb(123, 255, 123);
+    text-decoration:line-through;
 }

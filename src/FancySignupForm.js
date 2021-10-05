@@ -8,17 +8,14 @@ const FancySignupForm = (props) => {
     const [email, setEmail] = React.useState("");
 
     function handleNameChange(e) {
-        console.log("name: " + e.target.value);
         setName(e.target.value)
     }
 
     function handleUsernameChange(e){
-        console.log("username: " + e.target.value);
         setUsername(e.target.value);
     }
 
     function handleEmailChange(e){
-        console.log("email: " + e.target.value);
         setEmail(e.target.value);
     }
 

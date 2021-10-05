@@ -1,19 +1,39 @@
+import React from "react";
 import FancyUserList from "./FancyUserList";
 
 const FancySignupForm = (props) => {
+
+    const [name, setName] = React.useState("");
+    const [username, setUsername] = React.useState("");
+    const [email, setEmail] = React.useState("");
+
+    function handleNameChange(e) {
+        console.log("name: " + e.target.value);
+        setName(e.target.value)
+    }
+
+    function handleUsernameChange(e){
+        console.log("username: " + e.target.value);
+        setUsername(e.target.value);
+    }
+
+    function handleEmailChange(e){
+        console.log("email: " + e.target.value);
+        setEmail(e.target.value);
+    }
 
     return (
         <div>
             <h2>Users</h2>
             <form onSubmit={props.handleFormSubmit} id="signup-form">
                 <label htmlFor="form-name">Name:</label>
-                <input type="text" name="name" id="form-name"></input>
+                <input type="text" name="name" id="form-name" value={name} onChange={handleNameChange}></input>
 
                 <label htmlFor="form-username">Username:</label>
-                <input type="text" name="username" id="form-username"></input>
+                <input type="text" name="username" id="form-username" value={username} onChange={handleUsernameChange}></input>
 
                 <label htmlFor="email">Email:</label>
-                <input type="text" name="email" id="form-email"></input>
+                <input type="text" name="email" id="form-email" value={email} onChange={handleEmailChange}></input>
 
                 <label htmlFor="form-password">Password:</label>
                 <input type="password" name="password" id="form-password" onChange={props.validatePassword}></input>

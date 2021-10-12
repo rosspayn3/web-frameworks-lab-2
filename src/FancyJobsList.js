@@ -6,15 +6,15 @@ const FancyJobsList = (props) => {
         <div>
             <h2>Jobs</h2>
             <FancySelect options={props.options} onchange={props.selectOnChange} />
-            <ul>
+            <ul id="jobs" >
                 {props.jobs
                     .filter((job) => {
                         return job.concentration.includes(props.selectedConcentration);
                     })
                     .map((job) => {
                         return (
-                            <li key={job.id}>
-                                <strong className="job-title">{job.title}</strong>
+                            <li key={job.id} className={`job ${job.concentration[0].toLowerCase()}`}>
+                                <strong className={`job-title`}>{job.title}</strong>
                                 <ul>
                                     <li>Salary: {job.salary}</li>
                                     <li>Concentration: {job.concentration[0]}</li>

@@ -2,6 +2,7 @@
     background-color: #282c34;
     min-height: 100vh;
     padding: 2% 5%;
+    font-family: 'Roboto', sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,7 +36,7 @@
 }
 
 .user-uid {
-    color: rgb(100, 185, 255);
+    color: rgb(154, 210, 255);
 }
 
 .row {
@@ -70,4 +71,24 @@ form input {
 #requirements .valid {
     color:rgb(123, 255, 123);
     text-decoration:line-through;
+}
+
+#jobs > li > ul > li{
+    margin: 0.25rem 0;
+}
+
+#jobs .programming .job-title{
+    color:rgb(192, 40, 40)
+}
+
+#jobs .artificial .job-title{
+    color:green;
+}
+
+#jobs .cybersecurity .job-title{
+    color:rgb(0, 128, 255)
+}
+
+#jobs .networking .job-title{
+    color:goldenrod
 }

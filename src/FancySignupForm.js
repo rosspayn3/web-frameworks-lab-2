@@ -32,12 +32,19 @@ const FancySignupForm = (props) => {
                 console.log(`%c 🔥🔥 BAD PASSWORD 🔥🔥`, "color: #c22");
             } else {
                 console.log(`%c adding new user with email "${newUser.email}" !`, "color: #6c6");
-                props.setUsers((users) => users.concat(newUser) );
-                document.getElementById("signup-form").reset();
-                resetPasswordRequirements();
+                props.setUsers((users) => users.concat(newUser));
+                resetForm();
             }
         }
     };
+
+    const resetForm = () => {
+        document.getElementById("signup-form").reset();
+        setName("");
+        setUsername("");
+        setEmail("");
+        resetPasswordRequirements();
+    }
 
     const validatePassword = (e) => {
         let pass = e.target.value;

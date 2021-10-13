@@ -19,7 +19,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h2>CS 4903 Web Frameworks - Lab 2</h2>
+                <h2>CS 4903 Web Frameworks - Lab 3</h2>
                 <h3>Ross Payne</h3>
             </header>
             <hr />
